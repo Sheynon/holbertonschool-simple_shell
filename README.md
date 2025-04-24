@@ -20,13 +20,13 @@ of providing users with an optimal experience.
 
 ## list fille 
 
-| fille     | Description                                                                       |
-|-----------------------------------------------------------------------------------------------|
-| `mainc.c`         | Contains the main function that manages the shell                         |
-| `shell.h`         | Declares prototypes of functions used in the shell and global constants   |
-| `_strdup.c`       | Implement a function to duplicate a string                                |
-| `env.c`           | Contains functions to display system environment variables                | 
-| `exec.c`          | Manages command execution using system calls                              |
-| `path_handler.c`  | Contains functions for manipulating paths to executable programs.         |
-| `tokenizer.c`     | Implement functions to split a command line                               |
-| `utils.c`         | Contains utility functions for handling strings                           |
+ File Name           | Description                                                              |
+ |---------------------|---------------------------------------------------------------------------|
+ | `main.c`            | Contains the main function that manages the shell                        |
+ | `shell.h`           | Declares function prototypes and global constants used in the shell      |
+ | `_strdup.c`         | Implements a function to duplicate a string                              |
+ | `env.c`             | Contains functions to display environment variables                      |
+ | `exec.c`            | Handles command execution using system calls                             |
+ | `path_handler.c`    | Contains functions for manipulating paths to executable programs         |
+ | `tokenizer.c`       | Implements functions to split a command line into tokens                 |
+ | `utils.c`           | Contains utility functions for handling strings                          |
