@@ -44,4 +44,5 @@ of providing users with an optimal experience.
  ./shell
 
 
-![Capture PNG 1](https://github.com/user-attachments/assets/246efda5-5179-48ad-b1bd-2e2c19b85034)
+
+![Capture](https://github.com/user-attachments/assets/2a2f3c66-3dca-4992-bd8b-f2c8f466390a)
