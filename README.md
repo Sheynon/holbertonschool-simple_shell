@@ -42,3 +42,6 @@ of providing users with an optimal experience.
  3. execute the programe
 
  ./shell
+
+
+![Capture PNG 1](https://github.com/user-attachments/assets/246efda5-5179-48ad-b1bd-2e2c19b85034)
