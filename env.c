@@ -22,12 +22,17 @@ void print_env(void)
  */
 char *_getenv(const char *name)
 {
-	int i;
+	int i, j;
 	size_t len = _strlen(name);
 
 	for (i = 0; environ[i]; i++)
 	{
-		if (_strcmp(environ[i], name, len) == 0 && environ[i][len] == '=')
+		for (j = 0; j < (int)len; j++)
+		{
+			if (environ[i][j] != name[j])
+				break;
+		}
+		if (j == (int)len && environ[i][j] == '=')
 			return (_strdup(environ[i] + len + 1));
 	}
 	return (NULL);
