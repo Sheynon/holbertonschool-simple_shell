@@ -9,7 +9,11 @@ void execute_command(char **argv)
 	pid_t pid;
 	char *path_cmd;
 
-	path_cmd = find_path(argv[0]);
+	if (strchr(argv[0], '/'))
+		path_cmd = _strdup(argv[0]);
+	else
+		path_cmd = find_path(argv[0]);
+
 	if (path_cmd == NULL)
 	{
 		write(STDERR_FILENO, argv[0], _strlen(argv[0]));
