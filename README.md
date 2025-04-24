@@ -21,7 +21,7 @@ of providing users with an optimal experience.
 ## list fille 
 
 | fille     | Description                                                                       |
-|-----------------------------------                                                            |
+|-----------------------------------------------------------------------------------------------|
 | `mainc.c`         | Contains the main function that manages the shell                         |
 | `shell.h`         | Declares prototypes of functions used in the shell and global constants   |
 | `_strdup.c`       | Implement a function to duplicate a string                                |
