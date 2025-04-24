@@ -19,6 +19,9 @@ int main(void)
 		nread = getline(&line, &len, stdin);
 		if (nread == -1)
 		{
+			if (isatty(STDIN_FILENO))
+				write(STDOUT_FILENO, "exit\n", 5);
+
 			free(line);
 			exit(EXIT_SUCCESS);
 		}
