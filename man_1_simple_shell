@@ -1,48 +1,103 @@
-### `man_1_simple_shell`
-
-```roff
-.TH hsh 1 "April 2025" "Simple Shell" "User Commands"
-
+.TH simple_shell 1 "April 2025" "Version 1.0" "User Commands"
 .SH NAME
-hsh \- simple UNIX command line interpreter
+simple_shell \- a simple UNIX command line interpreter
 
 .SH SYNOPSIS
-.B hsh
-.RI [scriptfile]
+.B simple_shell
 
 .SH DESCRIPTION
-.B hsh
-is a simple UNIX shell program written in C. It reads commands from standard input or a script file and executes them.
+.B simple_shell
+is a minimal UNIX command-line interpreter (shell) written in C, created as part of a learning project at Holberton School.
+
+The shell reads commands from the standard input and executes them. It supports basic functionalities such as running system commands, handling arguments, using the PATH variable, and executing a few built-in commands.
 
 .SH FEATURES
 .TP
-Interactive mode:
-Displays a prompt and waits for the user to type a command.
+\fBPrompt\fR
+Displays a prompt \fB$\fR where the user can type commands.
+
 .TP
-Non-interactive mode:
-Reads commands from a script or piped input and executes them.
+\fBExecute Commands\fR
+Accepts standard UNIX commands and executes them using the \fBexecve\fR system call.
+
+.TP
+\fBArguments\fR
+Supports commands with arguments (e.g., \fBls -l /tmp\fR).
+
+.TP
+\fBPATH Handling\fR
+Searches for commands in the directories listed in the PATH environment variable.
+
+.TP
+\fBBuilt-in Commands\fR
+Supports the following built-in commands:
+.RS
+.IP \fBexit\fR
+Exit the shell.
+.IP \fBenv\fR
+Display the current environment variables.
+.RE
+
+.TP
+\fBError Handling\fR
+Handles errors such as:
+- command not found
+- permission denied
+- failed fork or execve
 
 .SH USAGE
 .TP
-To start the shell:
-.B ./hsh
+To run the shell, compile the project and execute:
+.B
+./hsh
 
 .TP
-To run in non-interactive mode:
-.B echo "ls" | ./hsh
+Examples:
+.B
+$ ls -l
+.br
+$ /bin/ls
+.br
+$ env
+.br
+$ exit
 
-.SH BUILTINS
+.SH FILES
 .TP
-.B exit
-Exits the shell.
+.B main.c
+Entry point of the shell.
+.TP
+.B exec.c
+Handles command execution and process creation.
+.TP
+.B builtins.c
+Implements built-in commands such as \fBexit\fR and \fBenv\fR.
+.TP
+.B utils.c
+Contains helper functions like string parsing and memory management.
+.TP
+.B shell.h
+Header file containing macros, structures, and function prototypes.
 
 .SH AUTHORS
-Florian Chéreau <10604@holbertonstudents.com>  
-Jonathan Labadie <10575@holbertonstudents.com>
-Romain Le Boulzec <10589@holbertonstudents.com>
+Written by:
+- Florian Chéreau <10604@holbertonstudents.com>
+- Jonathan Labadie <10575@holbertonstudents.com>
+- Romain Le Boulzec <10589@holbertonstudents.com>
+
+.SH BUGS
+Currently does not support:
+- Command chaining (e.g., using `&&`, `||`)
+- Advanced shell features (like redirections or pipes)
 
 
 .SH SEE ALSO
 .BR sh (1),
-.BR bash (1)
+.BR bash (1),
+.BR execve (2),
+.BR fork (2),
+.BR wait (2),
+.BR getenv (3)
 
+.SH LICENSE
+This project is for educational purposes and does not carry a specific license. For more information, refer to the README file.
