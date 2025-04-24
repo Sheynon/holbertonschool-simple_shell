@@ -30,3 +30,15 @@ of providing users with an optimal experience.
  | `path_handler.c`    | Contains functions for manipulating paths to executable programs         |
  | `tokenizer.c`       | Implements functions to split a command line into tokens                 |
  | `utils.c`           | Contains utility functions for handling strings                          |
+
+ ## instalation of shell
+
+ 1. git clone https://github.com/Sheynon/holbertonschool-simple-shell.git
+
+ 2. Compile the source code
+
+ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o shell
+
+ 3. execute the programe
+
+ ./shell
