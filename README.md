@@ -12,14 +12,8 @@ of providing users with an optimal experience.
 ## Internal shell commands 
 
 | comande   | Description                            |
-|----------------------------------------------------|
 | exit      | exit shell                             |
-|----------------------------------------------------|
 | cd        | change of repertoire                   |
-|----------------------------------------------------|
 | env       | display current environment variables  |
-|----------------------------------------------------|
 | setenv    | Sets an environment variable           |
-|----------------------------------------------------|
 | unsetenv  | Delete an environment variable         |
-|----------------------------------------------------|
