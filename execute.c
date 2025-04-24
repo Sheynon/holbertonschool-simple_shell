@@ -14,7 +14,7 @@ void execute_command(char *command)
 	int i = 0;
 
 
-	token = strtok(input, " ");
+	token = strtok(*command, " ");
 	while (token != NULL && i < 63)
 	{
 		argv[i++] = token;
