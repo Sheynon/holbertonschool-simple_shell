@@ -3,6 +3,13 @@
 #include <stdlib.h>
 #include <unistd.h>
 
+/**
+ * find_path - function to get the evironnement
+ * @command: pointer to command to use
+ *
+ * Return: NULL
+ */
+
 char *find_path(char *command)
 {
 	char *path = _getenv("PATH");
