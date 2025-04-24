@@ -1,0 +1,48 @@
+### `man_1_simple_shell`
+
+```roff
+.TH hsh 1 "April 2025" "Simple Shell" "User Commands"
+
+.SH NAME
+hsh \- simple UNIX command line interpreter
+
+.SH SYNOPSIS
+.B hsh
+.RI [scriptfile]
+
+.SH DESCRIPTION
+.B hsh
+is a simple UNIX shell program written in C. It reads commands from standard input or a script file and executes them.
+
+.SH FEATURES
+.TP
+Interactive mode:
+Displays a prompt and waits for the user to type a command.
+.TP
+Non-interactive mode:
+Reads commands from a script or piped input and executes them.
+
+.SH USAGE
+.TP
+To start the shell:
+.B ./hsh
+
+.TP
+To run in non-interactive mode:
+.B echo "ls" | ./hsh
+
+.SH BUILTINS
+.TP
+.B exit
+Exits the shell.
+
+.SH AUTHORS
+Florian Chéreau <10604@holbertonstudents.com>  
+Jonathan Labadie <10575@holbertonstudents.com>
+Romain Le Boulzec <10589@holbertonstudents.com>
+
+
+.SH SEE ALSO
+.BR sh (1),
+.BR bash (1)
+
