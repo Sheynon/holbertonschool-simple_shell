@@ -43,8 +43,8 @@ of providing users with an optimal experience.
 
  ./shell
 
-Jonathan Labadie https://github.com/Sheynon
-Romain Le Boulzec https://github.com/romain344
-Florian Chereau https://github.com/C-Florian
+[Jonathan Labadie](https://github.com/Sheynon)
+[Romain Le Boulzec](https://github.com/romain344)
+[Florian Chereau](https://github.com/C-Florian)
 
 ![Capture](https://github.com/user-attachments/assets/2a2f3c66-3dca-4992-bd8b-f2c8f466390a)
