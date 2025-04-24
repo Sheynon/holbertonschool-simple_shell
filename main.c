@@ -34,7 +34,11 @@ int main(void)
 		}
 
 		if (_strcmp(argv[0], "exit") == 0)
-			break;
+		{
+			free(argv);
+			free(line);
+			exit(EXIT_SUCCESS);
+		}
 		if (_strcmp(argv[0], "env") == 0)
 			print_env();
 		else
