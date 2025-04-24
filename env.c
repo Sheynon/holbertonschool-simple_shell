@@ -27,7 +27,7 @@ char *_getenv(const char *name)
 
 	for (i = 0; environ[i]; i++)
 	{
-		if (_strncmp(environ[i], name, len) == 0 && environ[i][len] == '=')
+		if (_strcmp(environ[i], name, len) == 0 && environ[i][len] == '=')
 			return (_strdup(environ[i] + len + 1));
 	}
 	return (NULL);
